@@ -8,9 +8,18 @@
 <body>
   
   <button onclick="javascript: alert('button pressed');">test 1 - fires alert</button>
-  <button onclick="javascript: window.geoComplyCheck('test')" >call window.geoComplyCheck</button>
+  <button onclick="javascript: callStuff('Testing');" >call window.geoComplyCheck</button>
   <button onclick="javascript: gameGeoComplyCheck.geoComplyCheck('test');" >call gameGeoComplyCheck.geoComplyCheck</button>
   
 </body>
 
 </html>
+
+<script>
+function callStuff(toast){
+	alert(typeof window.geoComplyCheck);
+      if (typeof window.geoComplyCheck === "function") {
+        window.geoComplyCheck(toast);
+      }
+}
+</script>
